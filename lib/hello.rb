@@ -1,17 +1,18 @@
 def hello_t
 def hello_t(array)
   if block_given?
-    i = 0
+  i = 0
 
-end
-    while i < array.length
-      yield array[i]
-      i = i + 1
-      end
+  while i < array.length 
+    yield array[i]
+    i = i + 1
 
-# call your method here!
-      array
-    else
-      puts "Hey! No block was given!"
-    end
   end
+  array
+ else
+    puts "Hey! No block was given!" 
+
+ end
+end
+
+hello_t
